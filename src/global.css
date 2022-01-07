@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1f6aec;
+  --text-dark: #0b2253;
+  --gray2: #6d7a98;
+  --gray3: #b3becf;
+  --bg-color: #f4f7fc;
+  --radius: 8px;
+}
+body {
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  border: 1px solid #dee3eb;
+}
