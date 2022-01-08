@@ -1,6 +1,7 @@
 <script>
 import { AtSymbolIcon } from "@heroicons/vue/outline";
 import { PhoneIcon } from "@heroicons/vue/outline";
+import { formatDistanceToNow } from "date-fns";
 
 export default {
   name: "ProfileCard",
@@ -11,26 +12,31 @@ export default {
   props: {
     data: Object,
   },
+  computed: {
+    formattedDate() {
+      return formatDistanceToNow(new Date(this.data.createdAt), {
+        addSuffix: true,
+      });
+    },
+  },
 };
 </script>
 
 <template>
   <div
-    class="card w-[220px] py-5 px-3 white-card shadow-sm flex flex-col items-center gap-4 rounded-lg hover:-translate-y-1 hover:shadow-lg transition group"
+    class="card max-w-[400px] py-5 px-3 white-card shadow-md flex flex-col items-center gap-4 rounded-lg hover:-translate-y-1 hover:shadow-lg transition group"
   >
     <div class="img w-[100px] group-hover:scale-105 aspect-square transition">
       <img
         class="rounded-full shadow-sm"
-        :src="`https://avatars.dicebear.com/api/avataaars/${
-          data.fname + data.lname
-        }-${data.email}.svg`"
+        :src="`https://avatars.dicebear.com/api/avataaars/${data.firstName}.svg`"
         alt=""
       />
     </div>
     <div class="flex flex-col txt-gray2">
       <p class="flex gap-2 font-bold txt-main text-lg">
-        <span>{{ data.fname }}</span
-        ><span>{{ data.lname }}</span>
+        <span>{{ data.firstName }}</span
+        ><span>{{ data.lastname }}</span>
       </p>
       <p class="flex gap-1 items-center mt-1">
         <span><AtSymbolIcon class="w-4" /></span>{{ data.email }}
@@ -42,7 +48,7 @@ export default {
     <p
       class="mt-4 ml-auto text-xs txt-gray3 group-hover:text-blue-600 transition-colors"
     >
-      {{ data.createdAt }}
+      {{ formattedDate }}
     </p>
   </div>
 </template>

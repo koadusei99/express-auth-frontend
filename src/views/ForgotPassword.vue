@@ -34,7 +34,6 @@ export default {
   methods: {
     async onSubmit() {
       this.busy = true;
-      console.log(this.email);
       await this.sendRequest();
       this.email = "";
     },
@@ -43,7 +42,6 @@ export default {
         let resp = await axios.post("http://localhost:3000/password/forgot", {
           email: this.email,
         });
-        console.log(resp);
         if (resp.data) {
           notyf.success(resp.data.message);
         }
@@ -60,7 +58,7 @@ export default {
 </script>
 
 <template>
-  <div class="relative forgot my-[80px] mx-[80px]">
+  <div class="relative forgot my-[80px] mx-[140px]">
     <div><img src="../assets/logo.svg" alt="logo" class="ml-1 w-[37px]" /></div>
     <div class="content my-[100px] flex justify-between">
       <div class="txt mt-[50px]">
@@ -79,7 +77,7 @@ export default {
             >Email Address</label
           >
           <Field
-            class="border p-4 text-gray-300 border-bdr rounded h-12 ring-offset-2 hover:border-gray-100 focus:ring-2 focus:ring-primary-100 focus:border-primary-200 focus:ring-opacity-30"
+            class="appearance-none border p-4 text-gray-300 border-bdr rounded h-12 ring-offset-1 hover:border-gray-100 focus:ring-2 focus:ring-primary-100 focus:border-1 focus:border-primary-200 focus:ring-opacity-50"
             id="email"
             :rules="emailVal"
             name="email"

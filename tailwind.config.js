@@ -8,6 +8,7 @@ module.exports = {
       current: "currentColor",
       white: "#ffffff",
       red: colors.red,
+      slate: colors.slate,
       gray: {
         100: "#B3BECF",
         200: "#6D7A98",
