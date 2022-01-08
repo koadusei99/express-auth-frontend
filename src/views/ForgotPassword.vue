@@ -34,7 +34,6 @@ export default {
   methods: {
     async onSubmit() {
       this.busy = true;
-      console.log(this.email);
       await this.sendRequest();
       this.email = "";
     },
@@ -43,7 +42,6 @@ export default {
         let resp = await axios.post("http://localhost:3000/password/forgot", {
           email: this.email,
         });
-        console.log(resp);
         if (resp.data) {
           notyf.success(resp.data.message);
         }
