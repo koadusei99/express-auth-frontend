@@ -20,14 +20,13 @@ export default {
 </script>
 
 <template>
-  <nav>
-    <ul class="flex gap-3">
-      <li v-for="route in routes" :key="route.name" class="text-sm">
+  <nav class="flex justify-center items-center px-5 py-2 shadow-sm">
+    <ul class="flex gap-5 text-xs font-semibold txt-gray2">
+      <li v-for="route in routes" :key="route.name" class="hover:text-blue-600">
         <router-link :to="{ name: route.route }">{{ route.name }}</router-link>
       </li>
     </ul>
   </nav>
-  <img src="./assets/logo.svg" alt="" />
 
   <router-view></router-view>
 </template>
