@@ -12,7 +12,6 @@ export default {
 <template>
   <h1>About</h1>
   <ul>
-    <li v-for="c in contributors">{{ c }}</li>
   </ul>
 </template>
 
