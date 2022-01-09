@@ -58,16 +58,20 @@ export default {
 </script>
 
 <template>
-  <div class="relative forgot my-[80px] mx-[140px]">
-    <div><img src="../assets/logo.svg" alt="logo" class="ml-1 w-[37px]" /></div>
-    <div class="content my-[100px] flex justify-between">
+  <div class="relative forgot my-[80px] mx-5">
+    <div class="mx-[90px]">
+      <img src="../assets/logo.svg" alt="logo" class="ml-1 w-[37px]" />
+    </div>
+    <div
+      class="content my-[100px] flex justify-between gap-8 flex-wrap max-w-[1136px] mx-auto"
+    >
       <div class="txt mt-[50px]">
         <h2 class="text-[46px] font-bold text-gray-300">Forgot Password</h2>
         <p class="text-gray-100 text-3xl max-w-[480px] mt-6">
           Kindly enter your registered email to reset your passsword
         </p>
       </div>
-      <div class="max-w-[500px] w-full">
+      <div class="sm:max-w-[500px] w-full">
         <Form
           class="white-card flex flex-col w-full px-8 py-10 rounded-lg shadow-sm"
           action=""
