@@ -42,6 +42,10 @@
 .app-container{
   margin: 80px 140px;
 }
+.logo
+{
+  width: 37px;
+}
 
 .content-wrapper{
   display: flex;
