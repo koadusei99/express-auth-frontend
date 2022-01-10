@@ -207,6 +207,8 @@ export default {
   padding: 10px;
   text-transform: uppercase;
   padding: 10px;
+  color: #fff;
+  background: var(--primary);
   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
 }
 .slider__txt {
@@ -231,12 +233,12 @@ export default {
 
 @keyframes check {
   50% {
-    outline-color: #333;
-    box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+    outline-color: var(--primary);
+    box-shadow: 0 0 0 12px var(--primary), 0 0 0 36px rgba(51, 51, 51, 0.2);
   }
   100% {
-    outline-color: #333;
-    box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+    outline-color: var(--primary);
+    box-shadow: 0 0 0 0 var(--primary), 0 0 0 0 rgba(51, 51, 51, 0);
   }
 }
 </style>
